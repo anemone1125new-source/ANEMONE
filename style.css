@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  color: #333;
+  border-left: 30px solid black;
+  border-right: 30px solid black;
+  border-top: 20px solid black;
+  border-bottom: 30px solid black;
+}
+
+header {
+  background-image: url("images/24974498.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+header h2 {
+  background: rgba(22, 61, 58, 0.35);
+  color: rgb(245, 245, 247);
+  padding: 12px 30px;
+  border-radius: 200px;
+  display: inline-block;
+  margin: 10px auto;
+  font-size: clamp(20px, 3vw, 36px);
+}
+
+header h3 {
+  background: rgba(152, 235, 228, 0.75);
+  color: rgb(4, 4, 66);
+  padding: 10px 40px;
+  border-radius: 200px;
+  display: inline-block;
+  margin: 10px auto;
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 500px;
+  height: auto;
+}
+
+.logo-image {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin: 20px auto 10px;
+}
+
+.img-small {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.img-small:hover {
+  transform: scale(1.08);
+}
+
+.top-nav,
+.menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 0;
+}
+
+.menu-nav {
+  margin: 10px 0 20px;
+}
+
+button {
+  width: 220px;
+  height: 90px;
+  border: none;
+  padding: 1px 1px;
+  border-radius: 1px;
+  background: #f0ecec;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 28px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #e0d3d3;
+  transform: scale(1.04);
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.page {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.pages {
+  background: rgb(190, 200, 243);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden1 {
+  display: flex;
+}
+
+
+.big-button {
+  margin-top: 20px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  body {
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-top: 10px solid black;
+    border-bottom: 20px solid black;
+  }
+
+  .menu-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 80%;
+    max-width: 260px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .page {
+    padding: 20px;
+  }
+
+  header {
+    padding: 30px 15px 40px;
+  }
+
+  header h2,
+  header h3 {
+    width: 90%;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+  }
+
+  .big-button {
+    width: 100%;
+    max-width: 260px;
+    font-size: 18px;
+  }
+
+  .socials {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    width: 120px;
+  }
+
+  .img-small {
+    width: 60px;
+    height: 60px;
+  }
+
+  .page h2 {
+    font-size: 26px;
+  }
+
+  .page p {
+    font-size: 16px;
+  }
+}
+
+/* プロフィール全体 */
+.profile-title {
+    text-align: center;
+    color: #806a2c;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* 全体の幅 */
+.member-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* アイコンを横並びにする */
+.member-avatars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+/* アイコンのボタン */
+.avatar {
+    width: 85px;
+    height: 85px;
+    padding: 0;
+    border: 3px solid #e3d7ac;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 選択中のアイコン */
+.avatar.active {
+    border-color: #b79535;
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px #f1e6c5;
+}
+
+.avatar:hover {
+    transform: scale(1.08);
+}
+
+/* プロフィールカード */
+.profile-card {
+    min-height: 280px;
+    padding: 35px 40px;
+    background-color: #fff;
+    background-image:
+        linear-gradient(#eeeae2 1px, transparent 1px),
+        linear-gradient(90deg, #eeeae2 1px, transparent 1px);
+    background-size: 10px 10px;
+    border: 1px solid #eee5d1;
+    box-shadow: 0 8px 25px rgba(120, 100, 50, 0.08);
+}
+
+/* 名前 */
+.profile-card h3 {
+    color: #655326;
+    font-size: 28px;
+    margin: 0 0 15px;
+}
+
+/* 金色の点線 */
+.profile-divider {
+    border-top: 2px dotted #b79535;
+    margin-bottom: 25px;
+}
+
+/* 自己紹介 */
+.profile-card p {
+    color: #50452b;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-line;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* 矢印 */
+.profile-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile-controls button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #b79535;
+    border-radius: 50%;
+    background: white;
+    color: #96751f;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-controls button:hover {
+    background: #b79535;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* 人数表示 */
+.member-count {
+    text-align: center;
+    color: #8a7748;
+    font-size: 14px;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+    .profile-title {
+        font-size: 23px;
+    }
+
+    .member-container {
+        padding: 10px;
+    }
+
+    .member-avatars {
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+    .profile-card {
+        padding: 25px 20px;
+    }
+
+    .profile-card h3 {
+        font-size: 23px;
+    }
+    .hidden {
+    display: none !important;
+}
+}

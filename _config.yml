@@ -4,6 +4,3 @@ url: https://anemone1125new-source.github.io
 markdown: kramdown
 encoding: utf-8
 lang: ja
-
-plugins:
-  - jekyll-sitemap

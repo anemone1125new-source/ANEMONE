@@ -381,4 +381,34 @@ footer {
     .hidden {
     display: none !important;
 }
+/* ページ全体をスクロール可能にする */
+html {
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* スクロール時の余白 */
+#home,
+#profile,
+#works,
+#contact {
+    scroll-margin-top: 20px;
+}
+
+/* ページ全体を縦スクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 }

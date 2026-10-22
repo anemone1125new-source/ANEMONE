@@ -1,18 +1,24 @@
 
 /* ページ切り替え */
+
+/* ページを切り替えず、目的の場所までスクロール */
 function showPage(pageName) {
+    // すべてのページを表示する
     document.querySelectorAll(".page").forEach(function (page) {
-        page.classList.add("hidden");
+        page.classList.remove("hidden");
     });
 
+    // 指定した場所まで滑らかに移動する
     const targetPage = document.getElementById(pageName);
 
     if (targetPage) {
-        targetPage.classList.remove("hidden");
-    } else {
-        console.error("ページが見つかりません:", pageName);
+        targetPage.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
     }
 }
+
 
 
 /* メンバー情報 */
@@ -79,16 +85,16 @@ const members = [
             "演劇は好きで楽しいけど、上手いわけではないので、皆さんが観れるような役作りがんばります"
     },
     {
-        name: "涼海そう",
-        role: "大学生 / 演劇好き / プログラミングを勉強中",
+        name: "桃音",
+        role: "好きなもの：",
         description:
-            "舞台や物語に魅了され、毎日新しい発見をしています。音楽、映画、ゲーム、演劇を通じて表現を楽しんでいます。"
+            "　　　　"
     },
     {
-        name: "涼海そう",
-        role: "大学生 / 演劇好き / プログラミングを勉強中",
+        name: "猪瀬　悠良",
+        role: "好きなもの：",
         description:
-            "舞台や物語に魅了され、毎日新しい発見をしています。音楽、映画、ゲーム、演劇を通じて表現を楽しんでいます。"
+            "　　　　　"
     }
 ];
 

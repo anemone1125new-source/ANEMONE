@@ -1,0 +1,10 @@
+title: 舞台の記憶
+description: 演劇とプログラミングを愛する大学生のポートフォリオサイト
+url: https://neco81cater-ai.github.io
+theme: jekyll-default
+markdown: kramdown
+encoding: utf-8
+lang: ja
+
+plugins:
+  - jekyll-sitemap

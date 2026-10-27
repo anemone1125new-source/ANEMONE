@@ -86,9 +86,9 @@ const members = [
     },
     {
         name: "桃音",
-        role: "好きなもの：",
+        role: "好きなもの：可愛いものとアイドル",
         description:
-            "　　　　"
+            "　　たくさんの感動を提供する演者を目指します!!　　"
     },
     {
         name: "猪瀬　悠良",
@@ -152,5 +152,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* 初期表示 */
     showMember(0);
-    showPage("home");
+
 });
+const container = document.getElementById("petals");
+
+for(let i = 0; i < 40; i++){
+    const petal = document.createElement("div");
+
+    petal.classList.add("petal");
+
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (5 + Math.random() * 10) + "s";
+    petal.style.animationDelay = Math.random() * 5 + "s";
+
+    container.appendChild(petal);
+}

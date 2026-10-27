@@ -498,37 +498,7 @@ footer {
     font-size: 14px;
 }
 
-/* スマートフォン対応 */
-@media (max-width: 600px) {
-    .profile-title {
-        font-size: 23px;
-    }
 
-    .member-container {
-        padding: 10px;
-    }
-
-    .member-avatars {
-        gap: 12px;
-        margin-top:20px;
-
-    }
-
-    .avatar {
-        width: 65px;
-        height: 65px;
-    }
-
-    .profile-card {
-        padding: 25px 20px;
-    }
-
-    .profile-card h3 {
-        font-size: 23px;
-    }
-    .hidden {
-    display: none !important;
-}
 /* ページ全体をスクロール可能にする */
 html {
     min-height: 100%;
@@ -562,4 +532,92 @@ body {
     border: 3px solid #b79535;
     border-radius: 15px;
 }
+/* スマホ最適化 */
+@media (max-width: 768px){
+
+  body{
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  /* 上部ロゴ */
+  .logo-image{
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* メニュー */
+  .top-nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    padding:10px;
+  }
+
+  .top-nav p{
+    display:none;
+  }
+
+  .top-nav button{
+    width:45%;
+    min-width:120px;
+    height:45px;
+    font-size:14px;
+  }
+
+  /* メイン */
+  main{
+    width:100%;
+    padding:10px;
+    margin:10px auto;
+  }
+
+  /* ページ */
+  .page{
+    padding:20px;
+  }
+
+  /* プロフィールアイコン */
+  .member-avatars{
+    gap:10px;
+  }
+
+  .avatar{
+    width:60px;
+    height:60px;
+  }
+
+  /* プロフィールカード */
+  .profile-card{
+    padding:20px;
+  }
+
+  .profile-card h3{
+    font-size:22px;
+  }
+
+  .profile-card p{
+    font-size:14px;
+  }
+
+  /* 作品画像 */
+  .works-images{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .img{
+    width:150%;
+    max-width:350px;
+  }
+
+  /* SNS画像 */
+  .img-small{
+    width:50px;
+    height:50px;
+  }
+
 }

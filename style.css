@@ -5,34 +5,98 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f3f3f3;
-  color: #333;
+  color: #1c0e5f;
   border-left: 30px solid black;
   border-right: 30px solid black;
   border-top: 20px solid black;
   border-bottom: 30px solid black;
+   overflow-x:hidden;
+    background: linear-gradient(
+        -45deg,
+        #a00244,
+        #661999,
+        #36236e,
+        #02192e
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+    #petals{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.petal{
+    width:30px;
+    height:30px;
+    background-image:url("images/emi.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-color:transparent;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+body.a {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  color: #dd1818;
+  border-left: 30px solid black;
+  border-right: 30px solid black;
+  border-top: 20px solid black;
+  border-bottom: 30px solid black;
+  background-color: #080d2b;
 }
 
 header {
   background-image: url("images/24974498.jpg");
-  background-size: cover;
+  background-size: 1000px;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   text-align: center;
-  padding: 40px 20px 60px;
+  padding: 10px 20px 10px;
 }
 
 header h2 {
   background: rgba(22, 61, 58, 0.35);
-  color: rgb(245, 245, 247);
+  color: rgb(171, 171, 255);
   padding: 12px 30px;
   border-radius: 200px;
   display: inline-block;
   margin: 10px auto;
   font-size: clamp(20px, 3vw, 36px);
 }
-
+.page {
+  background: #fffdf8;
+  border: 3px solid #b79535;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(120,100,50,0.08);
+}
 header h3 {
   background: rgba(152, 235, 228, 0.75);
   color: rgb(4, 4, 66);
@@ -41,6 +105,23 @@ header h3 {
   display: inline-block;
   margin: 10px auto;
   font-size: clamp(18px, 2vw, 28px);
+}
+h4 {
+  background: rgba(255, 247, 213, 0.75);
+  color: rgb(182, 139, 48);
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 1px auto;
+  font-size: clamp(28px, 4vw, 40px);
+}
+header h5 {
+  color: rgb(4, 4, 66);
+  padding: 150px 300px;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 10px auto;
+
 }
 
 .socials {
@@ -51,16 +132,43 @@ header h3 {
   flex-wrap: wrap;
 }
 
-img {
-  max-width: 500px;
-  height: auto;
+.img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 
+.works-images{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.work-image {
+    background-color: #161a31;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 700px;
+}
 .logo-image {
+  background-color: #18113a;
   display: block;
-  width: 180px;
+  width: 700px;
   height: auto;
-  margin: 20px auto 10px;
+  margin: 0px auto 0px;
+}
+.logos-image {
+  background-color: #18113a;
+  display: block;
+  width: 500px;
+  height: auto;
+  margin: 0px auto 0px;
 }
 
 .img-small {
@@ -74,8 +182,38 @@ img {
 .img-small:hover {
   transform: scale(1.08);
 }
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
 
-.top-nav,
+  background-color: #e8e8e9;
+  gap: 0;
+  padding: 0;
+}
+.nav1{
+    background-image: url("images/24974498.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #031eb8;
+    height: 250px;
+}
+.top-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 1000;
+
+  background-color: #1b214b;
+  gap: 0;
+  padding: 0;
+}
 .menu-nav {
   display: flex;
   justify-content: center;
@@ -90,20 +228,22 @@ img {
 }
 
 button {
-  width: 220px;
-  height: 90px;
-  border: none;
+  width: 100px;
+  height: 30px;
+  border: 10px;
   padding: 1px 1px;
   border-radius: 1px;
-  background: #f0ecec;
-  color: rgb(0, 0, 0);
+  background: hsl(231, 66%, 88%);
+  color: rgb(91, 102, 151);
   cursor: pointer;
-  font-size: 28px;
+  font-size: 10px;
   transition: 0.2s ease;
+  position:sticky;
+    z-index: 1000;
 }
 
 button:hover {
-  background: #e0d3d3;
+  background: #b16a6a;
   transform: scale(1.04);
 }
 
@@ -111,6 +251,7 @@ main {
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
+  background-color: #0f163d;
 }
 
 .page {
@@ -165,6 +306,7 @@ footer {
     border-right: 10px solid black;
     border-top: 10px solid black;
     border-bottom: 20px solid black;
+    background-color: #161a31;
   }
 
   .menu-nav {
@@ -251,6 +393,8 @@ footer {
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
 }
 
 /* アイコンのボタン */
@@ -264,6 +408,8 @@ footer {
     background: white;
     cursor: pointer;
     transition: 0.3s;
+
+    position: relative;
 }
 
 .avatar img {
@@ -364,6 +510,8 @@ footer {
 
     .member-avatars {
         gap: 12px;
+        margin-top:20px;
+
     }
 
     .avatar {
@@ -398,17 +546,20 @@ body {
 #profile,
 #works,
 #contact {
-    scroll-margin-top: 20px;
+    scroll-margin-top: 10px;
 }
 
 /* ページ全体を縦スクロール */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
+#profile1 {
+    border: 3px solid #b79535;
+    border-radius: 15px;
+}
 }

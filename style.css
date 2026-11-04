@@ -88,12 +88,12 @@ header h3 {
   border-radius: 200px;
   display: inline-block;
   margin: 10px auto;
-  font-size: clamp(18px, 2vw, 28px);
+  font-size: clamp(22px, 2vw, 28px);
 }
 h4 {
   background: rgba(255, 247, 213, 0.75);
   color: rgb(207, 182, 127);
-  padding: 0px 40px;
+  padding: 5px 20px;
   border-radius: 10px;
   display: inline-block;
   margin: 1px auto;
@@ -101,7 +101,7 @@ h4 {
 }
 h2{
   color: rgb(10, 95, 221);
-  padding: 10px 40px;
+  padding: 10px 10px;
   border-radius: 20px;
   display: inline-block;
   margin: 1px auto;
@@ -230,7 +230,7 @@ header h5 {
 }
 
 button {
-  width: 150px;
+  width: 100px;
   height: 50px;
   border: 10px;
   padding: 10px 10px;
@@ -372,7 +372,7 @@ footer {
   }
 
   .page h2 {
-    font-size: 30px;
+    font-size: 200px;
   }
 
   .page p {
@@ -385,10 +385,11 @@ footer {
   
   
     text-align: center;
+    background-size: 1px;
     background: #e7e6e2;
     color: #806a2c;
     font-size: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 5px;
 }
 
 /* 全体の幅 */

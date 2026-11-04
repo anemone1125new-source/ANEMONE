@@ -108,10 +108,10 @@ h2{
   font-size: clamp(28px, 4vw, 40px);
 }
 h6{
-  background: rgba(9, 5, 22, 0.75);
-  color: rgb(234, 235, 236);
-  padding: 10px 40px;
-  border-radius: 20px;
+  background: rgba(178, 159, 241, 0.75);
+  color: rgb(59, 29, 61);
+  padding: 0px 0px;
+  border-radius: 10px;
   display: inline-block;
   text-align: center;
   margin: 1px auto;
@@ -317,9 +317,9 @@ footer {
   }
 
   button {
-    width: 30px;
+    width: 80%;
     max-width: 260px;
-    height: 30px;
+    height: auto;
     font-size: 20px;
   }
 
@@ -337,7 +337,7 @@ footer {
 
   header h2,
   header h3 {
-    width: 100%;
+    width: 80%;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 20px;

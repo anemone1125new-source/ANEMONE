@@ -342,6 +342,13 @@ footer {
     padding-right: 12px;
     border-radius: 20px;
   }
+  h2,
+  h3 {
+    width: 80%;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+  }
 
   .big-button {
     width: 100%;
